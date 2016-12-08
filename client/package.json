@@ -1,0 +1,17 @@
+{
+  "name": "plat_client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^1.5.0",
+    "request": "^2.74.0",
+    "serialport": "^4.0.6",
+    "underscore": "^1.8.3"
+  }
+}

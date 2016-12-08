@@ -1,0 +1,8 @@
+module.exports = {
+	mqtt_broker : 'mqtt://some_ip_address:1883',
+	mqtt_username : 'mqtt_username',
+	mqtt_password : 'mqtt_password',
+	tenant : 'my_tenant', // Project scope used for MQTT topics
+	base : 'my_base',     // IoT gateway/base station scope used for MQTT topics
+	debug :true	
+}
