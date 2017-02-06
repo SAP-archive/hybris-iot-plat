@@ -76,7 +76,7 @@ The code contained in the client directory is intended to run on a Raspberry PI.
 ## How to overwrite the Teensy EEProm from node.js
 
 1. Find the script 'updateEEProm.js' in the /client folder
-2. Open the script, you will see a list of variables there
+2. Open the script in your favorite text editor, you will see a list of variables there
   - *NEW_PLAT_ID*, which should the desired ID of the plat you want to update
   - *NEW_BRIGHTNESS*, which is the brightness of the plat's neopixels. 150 was always fine, you can go up to 255
   - *NEW_BRIGHTNESS_TRESHOLD*, which is the threshold in absolute value of the photo sensor (to detect a liftup) - you probably want to leave it like this
