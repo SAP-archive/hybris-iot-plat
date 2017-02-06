@@ -71,3 +71,19 @@ The code contained in the client directory is intended to run on a Raspberry PI.
 15. Still in the `client` directory, run `sudo forever-service install plat -s client.js -r pi` and take note of the service commands to start/stop/restart the service as you might need them later on. Check the status and start the service if it is not started.
 16. At this point, you can run `sudo reboot` and the Pi should start the client software automatically.
 17. Congrats, you're running a plat client!
+
+
+## How to overwrite the Teensy EEProm from node.js
+
+1. Find the script 'updateEEProm.js' in the /client folder
+2. Open the script, you will see a list of variables there
+  1. *NEW_PLAT_ID*, which should the desired ID of the plat you want to update
+  2. *NEW_BRIGHTNESS*, which is the brightness of the plat's neopixels. 150 was always fine, you can go up to 255
+  3. *NEW_BRIGHTNESS_TRESHOLD*, which is the threshold in absolute value of the photo sensor (to detect a liftup) - you probably want to leave it like this
+  4. *NEW_NUMBER_OF_PIXELS*, which is the number of pixels you have on your neopixel ring or strip connected to the Teensy. Only you can count this number
+3. Adjust those variables according to what you want to set on the EEProm
+4. Please be aware that no *Plat ID* should exist twice
+5. To run the script, make sure that desired plat **and only that plat** is connected. **There really should only be one plat connected at a time**
+6. Also make sure no other script of the plat/bullseye project is running.
+7. To update the EEProm, run *node updateEEProm.js* after you plugged in the plat you want to update
+8. Check the log output, it gives you instructions on how to check that the new data has been written
