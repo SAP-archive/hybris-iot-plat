@@ -77,10 +77,10 @@ The code contained in the client directory is intended to run on a Raspberry PI.
 
 1. Find the script 'updateEEProm.js' in the /client folder
 2. Open the script, you will see a list of variables there
-  1. *NEW_PLAT_ID*, which should the desired ID of the plat you want to update
-  2. *NEW_BRIGHTNESS*, which is the brightness of the plat's neopixels. 150 was always fine, you can go up to 255
-  3. *NEW_BRIGHTNESS_TRESHOLD*, which is the threshold in absolute value of the photo sensor (to detect a liftup) - you probably want to leave it like this
-  4. *NEW_NUMBER_OF_PIXELS*, which is the number of pixels you have on your neopixel ring or strip connected to the Teensy. Only you can count this number
+  - *NEW_PLAT_ID*, which should the desired ID of the plat you want to update
+  - *NEW_BRIGHTNESS*, which is the brightness of the plat's neopixels. 150 was always fine, you can go up to 255
+  - *NEW_BRIGHTNESS_TRESHOLD*, which is the threshold in absolute value of the photo sensor (to detect a liftup) - you probably want to leave it like this
+  - *NEW_NUMBER_OF_PIXELS*, which is the number of pixels you have on your neopixel ring or strip connected to the Teensy. Only you can count this number
 3. Adjust those variables according to what you want to set on the EEProm
 4. Please be aware that no *Plat ID* should exist twice
 5. To run the script, make sure that desired plat **and only that plat** is connected. **There really should only be one plat connected at a time**
