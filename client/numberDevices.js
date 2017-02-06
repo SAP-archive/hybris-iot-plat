@@ -38,11 +38,11 @@ var onSerialData = function(data) {
 
 	if (serialBuf[this.path])
 	{
-		serialBuf[this.path] += data;
+		serialBuf[this.path] += data.toString();
 	}
 	else
 	{
-		serialBuf[this.path] = data;	
+		serialBuf[this.path] = data.toString();
 	}
 	// avoid always extending the buffer
 	var split = serialBuf[this.path].split('\n');
